@@ -1,0 +1,76 @@
+name = JY Blue Mccoy Theme
+description = Drupal 7 Custom Theme JY Blue Mccoy
+core = 7.x
+engine = phptemplate
+
+screenshot = screenshot.png
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[preface_first]  = 'Preface First'
+regions[preface_middle] = 'Preface Middle'
+regions[preface_last]   = 'Preface Last'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[footer_first]   = 'First Bottom'
+regions[footer_second]  = 'Second Bottom'
+regions[footer_third]   = 'Third Bottom'
+regions[footer_fourth]  = 'Fourth Bottom'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Theme Settings
+;;;;;;;;;;;;;;;;;;;;;
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+ 
+settings[toggle_logo] = 1 
+settings[toggle_name] = 1 
+settings[toggle_slogan] = 1 
+settings[toggle_node_user_picture] = 1 
+settings[toggle_comment_user_picture] = 1 
+settings[toggle_comment_user_verification] = 1 
+settings[toggle_favicon] = 1 
+settings[toggle_main_menu] = 1 
+settings[toggle_secondary_menu] = 1
+
+; 
+
+; settings[ ] = " "
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/superfish.css
+stylesheets[all][] = css/jybluemccoytheme_style.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = js/jquery.min.js
+scripts[] = js/hoverIntent.js
+scripts[] = js/superfish.min.js
+
+; Information about the theme
+version = "7.x-1.0"
+core = "7.x"
+project = "jybluemccoytheme"
