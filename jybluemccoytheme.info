@@ -51,24 +51,28 @@ settings[toggle_favicon] = 1
 settings[toggle_main_menu] = 1 
 settings[toggle_secondary_menu] = 1
 
-; 
+; Social links
 
-; settings[ ] = " "
+settings[social_facebook] = "https://www.facebook.com"
+settings[social_linkedin] = "https://www.linkedin.com"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/superfish.css
+stylesheets[all][] = css/bootstrap.min.css
+stylesheets[all][] = css/flexnav.css
+stylesheets[all][] = css/flexslider.css
 stylesheets[all][] = css/jybluemccoytheme_style.css
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
 
+scripts[] = js/bootstrap.min.js
 scripts[] = js/jquery.min.js
-scripts[] = js/hoverIntent.js
-scripts[] = js/superfish.min.js
+scripts[] = js/jquery.flexnav.min.js
+scripts[] = js/jquery.flexslider.js
 
 ; Information about the theme
 version = "7.x-1.0"

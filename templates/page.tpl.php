@@ -72,11 +72,12 @@
  * @ingroup themeable
  */
 ?>
+<div id="page">
 
-  <div id="page-wrapper"><div id="page">
-
-    <div id="header"><div class="section clearfix">
-
+<div id="header" class="container">
+  <div class="row">
+    <div class="col-lg-4">
+    
       <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -105,23 +106,86 @@
 
       <?php print render($page['header']); ?>
 
-    </div></div> <!-- /.section, /#header -->
+    </div><!-- .col -->
+    <div class="col-lg-8">
+      <div class="side-mainmenu">
+        <div class="menu-button">Menu</div>
+        <nav class="flexnav menu-navigation">
+          <?php if (!empty($primary_nav)): ?>
+          <?php print render($primary_nav); ?>
+          <?php endif; ?>
+        <p></nav></p>
+      </div><!-- .side-mainmenu -->  
+    </div><!-- .col -->
+  </div><!-- .row -->
+</div> <!-- /.section, /#header -->
 
-    <?php if ($main_menu || $secondary_menu): ?>
-      <div id="navigation"><div class="section">
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
-        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
-      </div></div> <!-- /.section, /#navigation -->
-    <?php endif; ?>
+<?php if ($is_front): ?>
+<div class="frontslideshow">
+<div class="container">
+<!-- Place somewhere in the <body> of your page -->
+<div class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="sites/all/themes/jybluetheme/images/slide1.jpg" />
+      <p class="flex-caption">Nature landscape 1</p>
+    </li>
+    <li>
+      <img src="sites/all/themes/jybluetheme/images/slide2.jpg" />
+      <p class="flex-caption">Nature landscape 2</p>
+    </li>
+    <li>
+      <img src="sites/all/themes/jybluetheme/images/slide3.jpg" />
+      <p class="flex-caption">Nature landscape 3</p>
+    </li>
+    <li>
+      <img src="sites/all/themes/jybluetheme/images/slide4.jpg" />
+      <p class="flex-caption">Nature landscape 4</p>
+    </li>
+  </ul>
+</div><!-- .flexslider -->
+
+</div><!-- .container -->
+</div><!-- .frontslideshow -->
+
+<div class="frontpreface">
+<div class="container"> 
+<div class="row">
+  <div class="col-lg-4">
+    <?php if ($page['preface_first']): ?><div id="preface_first"><?php print render($page['preface_first']); ?></div><?php endif; ?>
+  </div><!-- .col -->
+  <div class="col-lg-4">
+    <?php if ($page['preface_middle']): ?><div id="preface_middle"><?php print render($page['preface_middle']); ?></div><?php endif; ?>
+  </div><!-- .col -->
+  <div class="col-lg-4">
+    <?php if ($page['preface_last']): ?><div id="preface_last"><?php print render($page['preface_last']); ?></div><?php endif; ?>
+  </div><!-- .col -->
+</div>
+</div>  
+</div><!-- .frontpreface -->
+<?php endif; ?>
 
     <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+      <div id="breadcrumb" class="jybluebreadcrumb"><?php print $breadcrumb; ?></div>
     <?php endif; ?>
 
     <?php print $messages; ?>
 
-    <div id="main-wrapper"><div id="main" class="clearfix">
 
+
+<div id="main-wrapper">
+<div id="main" class="clearfix">
+<div class="container"> 
+<div class="row">
+  <?php if ($page['sidebar_first']): ?>
+      <div class="col-lg-3">
+        <div id="sidebar-first" class="column sidebar"><div class="section">
+          <?php print render($page['sidebar_first']); ?>
+        </div></div> <!-- /.section, /#sidebar-first -->      
+      </div><!-- .col -->
+  <?php endif; ?>
+
+  <div class="col-lg-9">
       <div id="content" class="column"><div class="section">
         <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
         <a id="main-content"></a>
@@ -134,23 +198,56 @@
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
-
-      <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_first']); ?>
-        </div></div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
-
-      <?php if ($page['sidebar_second']): ?>
+  </div><!-- .col -->
+  <?php if ($page['sidebar_second']): ?>
+      <div class="col-lg-4">
         <div id="sidebar-second" class="column sidebar"><div class="section">
           <?php print render($page['sidebar_second']); ?>
         </div></div> <!-- /.section, /#sidebar-second -->
-      <?php endif; ?>
-
-    </div></div> <!-- /#main, /#main-wrapper -->
+      </div><!-- .col -->
+  <?php endif; ?>
+</div>
+</div> 
+</div></div> <!-- /#main, /#main-wrapper -->
 
     <div id="footer"><div class="section">
       <?php print render($page['footer']); ?>
     </div></div> <!-- /.section, /#footer -->
 
-  </div></div> <!-- /#page, /#page-wrapper -->
+  </div> <!-- /#page, /#page-wrapper -->
+
+
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    $(".flexnav").flexNav({
+
+    // Drop down animation speed
+    'animationSpeed': 250,
+
+    // opacity animation
+    'transitionOpacity':true,
+
+    // menu button class name
+    'buttonSelector': '.menu-button',
+
+    // Change to true for use with hoverIntent plugin
+    'hoverIntent':false,
+
+    // hoverIntent default timeout
+    'hoverIntentTimeout': 150,
+
+    // dynamically calcs top level nav item widths
+    'calcItemWidths': false,
+
+    // enables hover support
+    'hover':true,
+    });
+  });
+
+jQuery(document).ready(function($){
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+
+</script>
