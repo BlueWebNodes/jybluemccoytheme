@@ -216,7 +216,10 @@
       <?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a><?php echo str_repeat("&nbsp;", 1); ?><?php print t('by'); ?><?php echo str_repeat("&nbsp;", 1); ?><a href="http://www.jybluedesign.com" target="_blank">JY Blue Design</a>.
     <?php endif; ?>
   </div>
-  <?php print render($page['footer']); ?>
+  <div>
+
+  </div>
+
 </div></div> <!-- /.section, /#footer -->
 
 </div> <!-- /#page, /#page-wrapper -->

@@ -73,23 +73,8 @@ $whitecolor: #FFFFFF;
 
 
 /* Front Slide Show */
-.slideshow-bg {
+.frontslideshow {
   background-color: rgba(229, 154, 104, 0.3);
-}
-#jybluecarousel {
-  width: $maxwidth;
-}
-.carousel-item img{
-  width:$maxwidth;
-}
-.carousel-caption {
-  background-color: rgba(255, 255, 255, 0.75);
-  h2, p{
-    color: $blackcolor;    
-  }
-  a{
-    color: $maincolor;    
-  } 
 }
 
 /* Front Preface */
