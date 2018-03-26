@@ -1,12 +1,199 @@
-// Default variables.
-@import 'default-variables';
+/*
+ * Theme Name:JY BLue Mccoy Theme
+ * Author: Jenny Yu
+ * Author URI: https://www.jybluedesign.com
+ * Description: A Drupal custom theme using SASS.
+ * Version: 1.0
+ * Text Domain: jybluemccoytheme
+ */
 
-// Bootstrap Framework.
-@import '../bootstrap/assets/stylesheets/bootstrap';
+/* Globals */
+$mainfont-family: Verdana, 'Helvetica Neue', Helvetica, sans-serif;
+$maincolor: #034ea2;
+$graycolor: #333333;
+$mainbackgroundcolor: #034ea2;
 
-// Base-theme overrides.
-@import 'overrides';
+body {
+  font-family: $mainfont-family;
+}
 
-// Custom overrides.
-@import 'bootstrapsasstheme_style';
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-family: $mainfont-family;
+  color: $maincolor;
+}
 
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $mainfont-family;
+  color: $graycolor;
+}
+
+a {
+  color: $maincolor;
+}
+/* Override Bootstrap's default css */
+$maxwidth: 100%;
+$containerwidth: 90%;
+$spacesizea: 24px;
+$spacesizeb: 20px;
+$spacesizec: 12px;
+
+.container-fluid {
+  width: $containerwidth;
+}
+
+/* Header */
+#header {
+  margin-top: $spacesizec;
+  margin-bottom: $spacesizec;
+}
+a#logo {
+  img {
+  max-width: 100px !important;
+  }
+}
+#site-name {
+  margin-top: $spacesizeb;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+/* Main menu */
+
+/* Main Page Background */
+$backgroundcolor: #d1e7ff;
+$backgroundcolorrgba: rgba(173, 205, 236, 0.85);
+$blackcolor: #000000;
+$blackcolorrgba: rgba(0,0,0,1);
+$whitecolor: #FFFFFF;
+
+
+/* Front Slide Show */
+.slideshow-bg {
+  background-color: rgba(229, 154, 104, 0.3);
+}
+#jybluecarousel {
+  width: $maxwidth;
+}
+.carousel-item img{
+  width:$maxwidth;
+}
+.carousel-caption {
+  background-color: rgba(255, 255, 255, 0.75);
+  h2, p{
+    color: $blackcolor;    
+  }
+  a{
+    color: $maincolor;    
+  } 
+}
+
+/* Front Preface */
+$prefacehight: 400px;
+
+.frontpreface-bg {
+  background-color: rgba(173, 205, 236, 0.85);
+  margin-bottom: $spacesizea;
+}
+.frontpreface {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  max-width:$maxwidth;
+  max-height:$maxwidth;
+}
+.nopadding {
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+#preface-half, #preface-quarter, #preface-eighth, #preface-sixteenth, #preface-thirtyfirst, #preface-thirtysecond {
+  text-align: center;
+  vertical-align: bottom;
+  background-color:rgba(3, 78, 162, 0.85);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: left top;
+  h2 {
+    color: $whitecolor;
+  }
+  p {
+    color: $whitecolor;
+    padding: $spacesizec;
+  }
+  a {
+  color: #06509f;
+  background-color: $whitecolor;
+  padding: 2px $spacesizeb 2px $spacesizeb;
+  }  
+}
+#preface-half {
+  height: $prefacehight;
+}
+#preface-quarter, #preface-eighth{
+  height: $prefacehight/2;
+}
+#preface-sixteenth, #preface-thirtyfirst, #preface-thirtysecond {
+  height: $prefacehight/4;
+}
+
+/* Breadcrumb */
+.jybluebreadcrumb {
+  display: none;
+}
+
+/* Main Wrapper  */
+#main-wrapper {
+  padding-bottom: $spacesizea;
+}
+
+/* Prefooter  */
+.prefooter {
+  background-color: $mainbackgroundcolor;
+}
+#footer-first, #footer-second, #footer-third, #footer-fourth {
+  color: $whitecolor;
+  padding: $spacesizea $spacesizec $spacesizec $spacesizec;
+  h2{
+    color: $whitecolor;
+  }
+  a{
+    color: $backgroundcolor;
+  }
+}
+
+/* Footer  */
+#footer {
+  background-color: $graycolor;
+  padding: $spacesizea 0px $spacesizea 0px;
+}
+.footersocial {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  max-width:$maxwidth;
+  max-height:$maxwidth;
+}
+.footercopyright {
+  color: $whitecolor;
+  margin-top: $spacesizeb;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  max-width:$maxwidth;
+  max-height:$maxwidth;
+  a{
+    color: $backgroundcolor;
+  }
+}
+
+/* Page Search  */
+#edit-keys {
+  margin-top: $spacesizec;
+  margin-bottom: $spacesizeb;
+}

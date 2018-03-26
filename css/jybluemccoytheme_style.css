@@ -1,70 +1,72 @@
 /*
-Theme Name: Drupal JY Blue Theme
-Author: Jenny Yu
-Author URI: https://www.jybluedesign.com
-Description: A Drupal custom theme using Bootstrap 4.
-Version: 1.0
-Text Domain: jybluetheme
-*/
+ * Theme Name:JY BLue Mccoy Theme
+ * Author: Jenny Yu
+ * Author URI: https://www.jybluedesign.com
+ * Description: A Drupal custom theme using SASS.
+ * Version: 1.0
+ * Text Domain: jybluemccoytheme
+ */
 /* Globals */
 body {
-  font-family: Verdana, 'Helvetica Neue', Helvetica, sans-serif; }
+  font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif; }
 
-h1, .h1 {
-  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ec8a1f; }
-
+h1, .h1,
 h2, .h2,
 h3, .h3 {
-  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #8d7d70; }
+  font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif;
+  color: #034ea2; }
 
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Verdana, "Helvetica Neue", Helvetica, sans-serif;
   color: #333333; }
 
+a {
+  color: #034ea2; }
+
 /* Override Bootstrap's default css */
+.container-fluid {
+  width: 90%; }
+
 /* Header */
 #header {
-  margin-bottom: 20px;
-  z-index: 2;
-  position: relative; }
+  margin-top: 12px;
+  margin-bottom: 12px; }
+
+a#logo img {
+  max-width: 100px !important; }
+
+#site-name {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.2; }
 
 /* Main menu */
-ul.menu li {
-  margin: 0 0 0 0; }
-
-li.expanded, li.collapsed, li.leaf {
-  padding: 0 0 0 0; }
-
-ul.menu li.leaf {
-  list-style: none !important; }
-
-ul.menu li.expanded {
-  list-style: none !important; }
-
+/* Main Page Background */
 /* Front Slide Show */
-.frontslideshow {
-  background-color: #034ea2;
-  margin-bottom: 20px; }
+.slideshow-bg {
+  background-color: rgba(229, 154, 104, 0.3); }
 
 #jybluecarousel {
   width: 100%; }
 
-.flex-caption {
-  width: 100%;
-  padding: 2%;
-  left: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-  font-size: 14px;
-  line-height: 18px; }
+.carousel-item img {
+  width: 100%; }
+
+.carousel-caption {
+  background-color: rgba(255, 255, 255, 0.75); }
+  .carousel-caption h2, .carousel-caption p {
+    color: #000000; }
+  .carousel-caption a {
+    color: #034ea2; }
 
 /* Front Preface */
+.frontpreface-bg {
+  background-color: rgba(173, 205, 236, 0.85);
+  margin-bottom: 24px; }
+
 .frontpreface {
   margin-left: auto;
   margin-right: auto;
@@ -72,8 +74,82 @@ ul.menu li.expanded {
   max-width: 100%;
   max-height: 100%; }
 
+.nopadding {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+#preface-half, #preface-quarter, #preface-eighth, #preface-sixteenth, #preface-thirtyfirst, #preface-thirtysecond {
+  text-align: center;
+  vertical-align: bottom;
+  background-color: rgba(3, 78, 162, 0.85);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: left top; }
+  #preface-half h2, #preface-quarter h2, #preface-eighth h2, #preface-sixteenth h2, #preface-thirtyfirst h2, #preface-thirtysecond h2 {
+    color: #FFFFFF; }
+  #preface-half p, #preface-quarter p, #preface-eighth p, #preface-sixteenth p, #preface-thirtyfirst p, #preface-thirtysecond p {
+    color: #FFFFFF;
+    padding: 12px; }
+  #preface-half a, #preface-quarter a, #preface-eighth a, #preface-sixteenth a, #preface-thirtyfirst a, #preface-thirtysecond a {
+    color: #06509f;
+    background-color: #FFFFFF;
+    padding: 2px 20px 2px 20px; }
+
+#preface-half {
+  height: 400px; }
+
+#preface-quarter, #preface-eighth {
+  height: 200px; }
+
+#preface-sixteenth, #preface-thirtyfirst, #preface-thirtysecond {
+  height: 100px; }
+
 /* Breadcrumb */
 .jybluebreadcrumb {
   display: none; }
+
+/* Main Wrapper  */
+#main-wrapper {
+  padding-bottom: 24px; }
+
+/* Prefooter  */
+.prefooter {
+  background-color: #034ea2; }
+
+#footer-first, #footer-second, #footer-third, #footer-fourth {
+  color: #FFFFFF;
+  padding: 24px 12px 12px 12px; }
+  #footer-first h2, #footer-second h2, #footer-third h2, #footer-fourth h2 {
+    color: #FFFFFF; }
+  #footer-first a, #footer-second a, #footer-third a, #footer-fourth a {
+    color: #d1e7ff; }
+
+/* Footer  */
+#footer {
+  background-color: #333333;
+  padding: 24px 0px 24px 0px; }
+
+.footersocial {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  max-width: 100%;
+  max-height: 100%; }
+
+.footercopyright {
+  color: #FFFFFF;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  max-width: 100%;
+  max-height: 100%; }
+  .footercopyright a {
+    color: #d1e7ff; }
+
+/* Page Search  */
+#edit-keys {
+  margin-top: 12px;
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=jybluemccoytheme_style.css.map */
