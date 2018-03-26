@@ -53,8 +53,25 @@ settings[toggle_secondary_menu] = 1
 
 ; Social links
 
-settings[social_facebook] = "https://www.facebook.com"
-settings[social_linkedin] = "https://www.linkedin.com"
+settings[social_logo1] = "sites/all/themes/jybluemccoytheme/images/facebooklogo.png"
+settings[social_logo2] = "sites/all/themes/jybluemccoytheme/images/linkedinlogo.png"
+
+settings[social_media1] = "https://www.facebook.com"
+settings[social_media2] = "https://www.linkedin.com"
+
+; Slideshow Settings
+
+settings[slideshow_slide1] = "sites/all/themes/jybluemccoytheme/images/slide1.jpg"
+settings[slideshow_slide2] = "sites/all/themes/jybluemccoytheme/images/slide2.jpg"
+settings[slideshow_slide3] = "sites/all/themes/jybluemccoytheme/images/slide3.jpg"
+
+settings[slideshow_title1] = "About"
+settings[slideshow_title2] = "Service"
+settings[slideshow_title3] = "News"
+
+settings[slideshow_link1] = "content/about"
+settings[slideshow_link2] = "content/service"
+settings[slideshow_link3] = "news"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
@@ -73,6 +90,7 @@ scripts[] = js/bootstrap.min.js
 scripts[] = js/jquery.min.js
 scripts[] = js/jquery.flexnav.min.js
 scripts[] = js/jquery.flexslider.js
+scripts[] = js/jyblue.js
 
 ; Information about the theme
 version = "7.x-1.0"
