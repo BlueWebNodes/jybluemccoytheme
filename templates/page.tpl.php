@@ -127,20 +127,16 @@
 <div class="flexslider">
   <ul class="slides">
     <li>
-      <img src="sites/all/themes/jybluetheme/images/slide1.jpg" />
-      <p class="flex-caption">Nature landscape 1</p>
+      <img src="<?php print theme_get_setting('slideshow_slide1'); ?>">
+      <p class="flex-caption"><a class="frmore" href="<?php print theme_get_setting('slideshow_link1'); ?>"><?php print theme_get_setting('slideshow_title1'); ?></a></p>
     </li>
     <li>
-      <img src="sites/all/themes/jybluetheme/images/slide2.jpg" />
-      <p class="flex-caption">Nature landscape 2</p>
+      <img src="<?php print theme_get_setting('slideshow_slide2'); ?>">
+      <p class="flex-caption"><a class="frmore" href="<?php print theme_get_setting('slideshow_link2'); ?>"><?php print theme_get_setting('slideshow_title2'); ?></a></p>
     </li>
     <li>
-      <img src="sites/all/themes/jybluetheme/images/slide3.jpg" />
-      <p class="flex-caption">Nature landscape 3</p>
-    </li>
-    <li>
-      <img src="sites/all/themes/jybluetheme/images/slide4.jpg" />
-      <p class="flex-caption">Nature landscape 4</p>
+      <img src="<?php print theme_get_setting('slideshow_slide3'); ?>">
+      <p class="flex-caption"><a class="frmore" href="<?php print theme_get_setting('slideshow_link3'); ?>"><?php print theme_get_setting('slideshow_title3'); ?></a></p>
     </li>
   </ul>
 </div><!-- .flexslider -->
@@ -210,11 +206,20 @@
 </div> 
 </div></div> <!-- /#main, /#main-wrapper -->
 
-    <div id="footer"><div class="section">
-      <?php print render($page['footer']); ?>
-    </div></div> <!-- /.section, /#footer -->
+<div id="footer"><div class="section">
+  <div class="footersocial"> 
+      <a href="<?php print theme_get_setting('social_media1'); ?>" target="_blank"><img src="<?php print $GLOBALS['base_url'];?>/<?php print theme_get_setting('social_logo1'); ?>"></a><?php echo str_repeat("&nbsp;", 4); ?>
+      <a href="<?php print theme_get_setting('social_media2'); ?>" target="_blank"><img src="<?php print $GLOBALS['base_url'];?>/<?php print theme_get_setting('social_logo2'); ?>"></a>
+  </div>
+  <div class="footercopyright"> 
+    <?php if ($site_name): ?>
+      <?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a><?php echo str_repeat("&nbsp;", 1); ?><?php print t('by'); ?><?php echo str_repeat("&nbsp;", 1); ?><a href="http://www.jybluedesign.com" target="_blank">JY Blue Design</a>.
+    <?php endif; ?>
+  </div>
+  <?php print render($page['footer']); ?>
+</div></div> <!-- /.section, /#footer -->
 
-  </div> <!-- /#page, /#page-wrapper -->
+</div> <!-- /#page, /#page-wrapper -->
 
 
 <script type="text/javascript">
