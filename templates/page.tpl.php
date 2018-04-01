@@ -144,7 +144,7 @@
 </div><!-- .container -->
 </div><!-- .frontslideshow -->
 
-<div class="frontpreface">
+<div id="snow" class="frontpreface">
 <div class="container"> 
 <div class="row">
   <div class="col-lg-4">

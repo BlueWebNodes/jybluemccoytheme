@@ -90,7 +90,7 @@ scripts[] = js/bootstrap.min.js
 scripts[] = js/jquery.min.js
 scripts[] = js/jquery.flexnav.min.js
 scripts[] = js/jquery.flexslider.js
-scripts[] = js/jyblue.js
+scripts[] = js/jybluesnow.js
 
 ; Information about the theme
 version = "7.x-1.0"
