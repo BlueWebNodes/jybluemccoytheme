@@ -4,3 +4,5 @@ Author: Jenny Yu
 Author URI: https://www.jybluedesign.com
 Version: 1.0
 Text Domain: jybluemccoytheme
+
+Unfinished.
